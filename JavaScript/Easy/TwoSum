@@ -1,0 +1,17 @@
+var twoSum = function(nums, target) {
+    let p1Index;
+    let difference = 0;
+    let differenceIndex;
+    let returnArray = []
+    for(let p1 = 0; p1 < nums.length-1; p1++){
+        difference = target - nums[p1]
+       if  (nums.includes(difference) && (nums.indexOf(nums[p1]) != nums.lastIndexOf(difference)) ){
+           p1Index = nums.indexOf(nums[p1])
+           differenceIndex = nums.lastIndexOf(difference)
+          
+       }
+    }
+     returnArray.push(p1Index);
+    returnArray.push(differenceIndex)
+    return returnArray
+};
